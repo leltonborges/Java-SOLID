@@ -7,7 +7,7 @@ import br.com.alura.rh.model.Funcionario;
 public class PromocaoService {
 
     public void promover(Funcionario funcionario, boolean metaBatida){
-        Cargo cargoAtual = funcionario.getCargo();
+        Cargo cargoAtual = funcionario.getDadosPessoais().getCargo();
         if(cargoAtual.equals(Cargo.GERENTE)){
             throw new ValidacaoException("Gerente não pode ser promovidos!");
         }
